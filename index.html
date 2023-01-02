@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Watercolor</title>
+    <style>
+      body {
+        background: url(https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1,
+      h2,
+      footer {
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+      }
+      h1 {
+        font-size: 80px;
+        margin: 20px;
+      }
+      img {
+        max-width: 100%;
+        border: solid 1px #767676;
+        border-radius: 7px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      a,
+      .learn-button {
+        text-decoration: none;
+      }
+      footer {
+        text-align: center;
+        font-size: 20px;
+        margin: 25px 0;
+      }
+
+      .theme-button {
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 6px;
+      }
+      .theme-button:hover {
+        background: rgba(148, 187, 233);
+        color: white;
+        cursor: pointer;
+      }
+      .container {
+        margin: 25px auto;
+        max-width: 700px;
+        background: rgba(230, 221, 197, 0.6);
+        padding: 15px;
+        border: solid #767676 2px;
+        border-radius: 6px;
+      }
+      .paint-pallete-picture {
+        transition: all 750ms ease-in-out;
+        border: solid #767676 2px;
+      }
+      .paint-pallete-picture:hover {
+        transform: scale(1.25);
+        cursor: pointer;
+      }
+      .woman-picture,
+      .bee-picture,
+      .horse-picture {
+        transition: all 500ms ease-in;
+      }
+      .woman-picture:hover,
+      .bee-picture:hover {
+        transform: scale(2);
+      }
+      .horse-picture:hover {
+        transform: scale(1.5);
+      }
+
+      .learn-button {
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 6px;
+      }
+      .learn-button:hover {
+        background: rgba(148, 187, 233);
+        color: white;
+        cursor: pointer;
+      }
+      .grid {
+        padding-top: 25px;
+        display: grid;
+        grid-template-columns: 1.25fr 1.5fr 1.25fr;
+        grid-gap: 10px;
+      }
+      .grid img {
+        width: 100%;
+      }
+      .dark {
+        background: rgba(7, 13, 54, 1);
+        color: azure;
+      }
+      .dark .container {
+        background: #767676;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Watercolor</h1>
+      <h2>💦 <em>Liquid therapy</em> 💦</h2>
+      <a
+        href="https://en.wikipedia.org/wiki/Watercolor_painting"
+        target="_blank"
+        ><img
+          src="https://artincontext.org/wp-content/uploads/2021/10/Watercolor-Paintings-Tips.jpg"
+          alt="watercolor pallette"
+          class="paint-pallete-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          class="woman-picture"
+          src="https://cdn.pixabay.com/photo/2017/04/02/16/58/woman-2196323_1280.jpg"
+        />
+        <img
+          class="horse-picture"
+          src="https://i.etsystatic.com/7725562/r/il/9ab376/1656267134/il_570xN.1656267134_rau7.jpg"
+        />
+        <img
+          class="bee-picture"
+          src="https://i.etsystatic.com/5995637/r/il/ccab55/1215142196/il_570xN.1215142196_s9vj.jpg"
+        />
+      </div>
+      <p>
+        Prized for the luminosity of its transparent colors, watercolor is a
+        water-based medium that is applied by brush, typically to white paper.
+        Packaged in cakes of color known as "pans," or in tubes of thickened
+        paint, it is composed of finely-ground pigment combined with water and
+        gum arabic, a binder that disperses the pigment particles to create a
+        uniform solution and adheres it to the support. Modern watercolors form
+        washes with only a touch of water, allowing greater ease of use.
+        <a
+          href="https://www.metmuseum.org/about-the-met/Collection-Areas/drawings-and-prints/materials-and-techniques/drawing/watercolor"
+          target="_blank"
+          ><em>More Information</em></a
+        >
+      </p>
+      <a href="https://www.skillshare.com/en/browse/watercolor" target="_blank">
+        <button class="learn-button">Learn How</button></a
+      >
+    </div>
+    <footer>Coded by M J Elwood</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
